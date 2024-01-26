@@ -1,0 +1,77 @@
+.job-listing-container {
+  font-family: 'Arial', sans-serif; 
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 15px; 
+  font-family: 'Arial', sans-serif; 
+}
+h2 {
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  color: #3498db; /* Change the color of the titles */
+  background-color: #ecf0f1; /* Add a background color between text and border */
+}
+
+.search-bar {
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif; 
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Add rounded corners */
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  
+}
+
+li {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px; /* Add rounded corners */
+}
+
+
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px; 
+}
+
+
+
+.job-description {
+  color: #555; 
+  font-size: 14px; /* Font size for job descriptions */
+  margin-top: 5px; /* Adjust top margin for spacing */
+}
+
+
+button:hover {
+  background-color: #45a049; /* Darken the color on hover */
+}

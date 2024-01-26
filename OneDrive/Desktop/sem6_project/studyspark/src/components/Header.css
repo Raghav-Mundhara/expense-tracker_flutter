@@ -1,0 +1,39 @@
+/* Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.dropdown {
+  position: relative;
+  margin: 0 10px;
+}
+
+button {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  display: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
