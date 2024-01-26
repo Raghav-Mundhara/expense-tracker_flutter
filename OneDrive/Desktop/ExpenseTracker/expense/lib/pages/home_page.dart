@@ -1,16 +1,15 @@
 import 'package:expense/expense_data.dart';
 import 'package:expense/models/expense-item.dart';
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
-
   @override
-  _HomePageState createState() => _HomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-
   final newExpenseNameController = TextEditingController();
   final newExpenseAmountController = TextEditingController();
 
@@ -32,11 +31,11 @@ class _HomePageState extends State<HomePage> {
           ),
           actions: [
             MaterialButton(
-              onPressed: save, 
+              onPressed: save,
               child: const Text('Save'),
             ),
             MaterialButton(
-              onPressed: cancel, 
+              onPressed: cancel,
               child: const Text('Cancel'),
             ),
           ],
@@ -47,29 +46,15 @@ class _HomePageState extends State<HomePage> {
 
   // save
   void save() {
-    ExpenseItem newExpense=ExpenseItem(
-        name: newExpenseNameController.text,
-        amount: newExpenseAmountController.text,
-        dateTime: DateTime.now(),
-      );
-    }
-    Provider.of<ExpenseData>(context,listen:false).addNewExpense(newExpense(
+    ExpenseItem newExpense = ExpenseItem(
       name: newExpenseNameController.text,
       amount: double.parse(newExpenseAmountController.text),
-      date: DateTime.now(),
-    ));
-    
-      @override
-      Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
-      }
+      dateTime: DateTime.now(),
+    );
+    Provider.of<ExpenseData>(context, listen: false).addNewExpense(newExpense);
   }
 
-  // cancel
-  void cancel() {
-    // Add your cancel logic here
-  }
+  void cancel() {}
 
   @override
   Widget build(BuildContext context) {
